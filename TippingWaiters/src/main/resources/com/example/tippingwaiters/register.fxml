@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ECEBBD;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tippingwaiters.RegistrationClass">
+   <children>
+      <Button fx:id="regButton" layoutX="246.0" layoutY="333.0" mnemonicParsing="false" onAction="#reg_button_enter" prefHeight="34.0" prefWidth="107.0" style="-fx-background-color: #FFFFFF;" text="Далее">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Button>
+      <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #B8B799;">
+         <opaqueInsets>
+            <Insets bottom="10.0" top="5.0" />
+         </opaqueInsets>
+         <children>
+            <Label ellipsisString="0" layoutX="237.0" layoutY="23.0" prefHeight="34.0" prefWidth="126.0" text="Регистрация">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="reg_name_table" layoutX="339.0" layoutY="128.0" prefHeight="25.0" prefWidth="207.0" promptText="Имя" style="-fx-background-color: #fafafa;">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="reg_lastName_table" layoutX="38.0" layoutY="128.0" prefHeight="25.0" prefWidth="207.0" promptText="Фамилия" style="-fx-background-color: #fafafa;">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

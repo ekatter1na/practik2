@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ECEBBD;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tippingwaiters.AdminMenu">
+    <children>
+        <Button fx:id="enterButton" layoutX="246.0" layoutY="360.0" mnemonicParsing="false" onAction="#clickEnterButton" style="-fx-background-color: #FFFFFF;" text="Распределить " />
+        <TableView fx:id="OfficiantList" layoutX="9.0" layoutY="33.0" onMouseClicked="#OnSelected" prefHeight="271.0" prefWidth="580.0">
+            <columns>
+                <TableColumn fx:id="familyColumn" prefWidth="105.0" text="Имя" />
+                <TableColumn fx:id="nameColumn" prefWidth="102.0" text="Фамилия" />
+                <TableColumn fx:id="NumberColumn" prefWidth="106.0" text="Количество" />
+                <TableColumn fx:id="tippingColumn" prefWidth="88.0" text="Чаевые" />
+                <TableColumn fx:id="resaultColumn" prefWidth="177.0" text="Сумма оплаты" />
+            </columns>
+        </TableView>
+        <Button fx:id="backButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#clickBackButton" style="-fx-background-color: #FFFFFF;" text="Выйти" />
+        <Label layoutX="187.0" layoutY="4.0" prefHeight="0.0" prefWidth="213.0" text="Расчет заработной платы">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="deleteButton" layoutX="522.0" layoutY="360.0" mnemonicParsing="false" onAction="#clickDeleteButton" style="-fx-background-color: #FFFFFF;" text="Удалить" />
+        <Label fx:id="endNumberPrice" layoutX="107.0" layoutY="339.0" text="0" />
+        <Label fx:id="endTippingPrice" layoutX="294.0" layoutY="333.0" text="0" />
+        <Label fx:id="endPaymentPrice" layoutX="492.0" layoutY="333.0" text="0" />
+        <Label layoutX="42.0" layoutY="310.0" text="Общее количество гостей" />
+        <Label layoutX="257.0" layoutY="310.0" text="Общие чаевые" />
+        <Label layoutX="454.0" layoutY="310.0" text="Общая оплата" />
+    </children>
+</AnchorPane>
