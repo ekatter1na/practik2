@@ -26,7 +26,7 @@
         <Label fx:id="endNumberPrice" layoutX="107.0" layoutY="339.0" text="0" />
         <Label fx:id="endTippingPrice" layoutX="294.0" layoutY="333.0" text="0" />
         <Label fx:id="endPaymentPrice" layoutX="492.0" layoutY="333.0" text="0" />
-        <Label layoutX="56.0" layoutY="310.0" text="Общее количество" />
+        <Label layoutX="42.0" layoutY="310.0" text="Общее количество гостей" />
         <Label layoutX="257.0" layoutY="310.0" text="Общие чаевые" />
         <Label layoutX="454.0" layoutY="310.0" text="Общая оплата" />
     </children>

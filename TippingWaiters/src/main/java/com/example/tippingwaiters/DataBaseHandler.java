@@ -5,13 +5,13 @@ import java.sql.*;
 
 public class DataBaseHandler extends Configs {
     Connection dbConnection;
-    public Connection getDbConnection() throws ClassNotFoundException, SQLException{
+    public Connection getDbConnection() throws ClassNotFoundException, SQLException{ //подключние к бд
         String connectionString = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;
         dbConnection = DriverManager.getConnection(connectionString, dbUser,dbPass);
         return dbConnection;
     }
 
-    public void signUpUser(User user){
+    public void signUpUser(User user){//добавление сотрудника
         String insert = "INSERT INTO User (Family, Name, NumberOfUsers, SumTipping,TotalSumPayment) VALUES(?,?,?,?,?)";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
@@ -27,7 +27,7 @@ public class DataBaseHandler extends Configs {
             throw new RuntimeException(e);
         }
     }
-    public ResultSet getUser(User user){
+    public ResultSet getUser(User user){//поиск сотрудника в бд
         ResultSet resSet = null;
 
         try {

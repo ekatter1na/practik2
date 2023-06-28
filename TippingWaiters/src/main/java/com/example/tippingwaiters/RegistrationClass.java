@@ -28,7 +28,7 @@ public class RegistrationClass {
     private TextField reg_name_table;
 
     @FXML
-    void reg_button_enter(ActionEvent event) {
+    void reg_button_enter(ActionEvent event) {//кнопка далее на окне регистрации
         regButton.getScene().getWindow().hide();
         regNewUser();
         FXMLLoader loader = new FXMLLoader();
@@ -44,7 +44,7 @@ public class RegistrationClass {
         stage.show();
     }
 
-    private void regNewUser() {
+    private void regNewUser() {//регистрирует нового пользователя
         DataBaseHandler dbHandler = new DataBaseHandler();
         String name = reg_name_table.getText();
         String surname = reg_lastName_table.getText();

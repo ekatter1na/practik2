@@ -33,7 +33,7 @@ public class LogMenu {
     Integer counter = 0;
 
     @FXML
-    void button_enter_menu(ActionEvent event) {
+    void button_enter_menu(ActionEvent event) { //авторизация, проверка на админа или пользователя
         String login = login_table.getText().trim();
         String loginPassword = FieldOfficiant.getText().trim();
         if(login_table.getText().equals("localhost") && FieldOfficiant.getText().equals("123qweasd")){
@@ -72,7 +72,7 @@ public class LogMenu {
         }
     }
 
-    private void loginUser (String login, String loginPassword) {
+    private void loginUser (String login, String loginPassword) {//авторизация пользователя проверка на ошибку
         DataBaseHandler dbHandler = new DataBaseHandler();
         User user = new User();
         user.setFamily(login);
@@ -98,7 +98,7 @@ public class LogMenu {
     }
 
     @FXML
-    void reg_Action(ActionEvent event) {
+    void reg_Action(ActionEvent event) {//переход на окно регистрации
         button_reg.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("register.fxml"));

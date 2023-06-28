@@ -70,7 +70,7 @@ public class AdminMenu implements Initializable {
     String text = "";
     Integer rows = 0;
     Integer endPayPrice = 0;
-    public void biilsSet(){
+    public void biilsSet(){ //запись в файл
         Random rand = new Random();
         Integer randin = rand.nextInt(0,1000000000);
         try(FileWriter writer = new FileWriter(randin.toString()+".txt", false))
@@ -90,7 +90,7 @@ public class AdminMenu implements Initializable {
         }
     }
     @FXML
-    void clickEnterButton(ActionEvent event) throws SQLException, ClassNotFoundException {
+    void clickEnterButton(ActionEvent event) throws SQLException, ClassNotFoundException { //расчет чаевых
         DataBaseHandler db = new DataBaseHandler();
         Connection con =  db.getDbConnection();
         ResultSet rs = con.createStatement().executeQuery("select * from User");
@@ -111,7 +111,7 @@ public class AdminMenu implements Initializable {
     }
 
     @FXML
-    void clickDeleteButton(ActionEvent event) throws SQLException, ClassNotFoundException {
+    void clickDeleteButton(ActionEvent event) throws SQLException, ClassNotFoundException { //удаление сотрудника
         DataBaseHandler db = new DataBaseHandler();
         try {
             Connection con =  db.getDbConnection();
@@ -126,7 +126,7 @@ public class AdminMenu implements Initializable {
         listReload(listM);
     }
     @FXML
-    void OnSelected(MouseEvent event) {
+    void OnSelected(MouseEvent event) { //выбор сотрудника
         try{
             int index = OfficiantList.getSelectionModel().getSelectedIndex();
             if(index < -1){
@@ -140,7 +140,7 @@ public class AdminMenu implements Initializable {
     }
 
     @FXML
-    void clickBackButton(ActionEvent event) {
+    void clickBackButton(ActionEvent event) { //выход с окна администратора
         backButton.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("meniloging.fxml"));
@@ -154,7 +154,7 @@ public class AdminMenu implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-    public void listReload( ObservableList<User> listM) throws SQLException, ClassNotFoundException {
+    public void listReload( ObservableList<User> listM) throws SQLException, ClassNotFoundException { //перехагруска страницы
         listM.clear();
         DataBaseHandler db = new DataBaseHandler();
         Connection con =  db.getDbConnection();
@@ -177,7 +177,7 @@ public class AdminMenu implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) { //инициализация
         DataBaseHandler db = new DataBaseHandler();
         try {
             Connection con =  db.getDbConnection();

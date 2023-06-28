@@ -31,7 +31,7 @@ public class MainOfficiant {
     private Label userNameLabel;
 
     @FXML
-    void click_Enter_button(ActionEvent event) throws SQLException, ClassNotFoundException {
+    void click_Enter_button(ActionEvent event) throws SQLException, ClassNotFoundException {//ввод данных пользователя в бд
         DataBaseHandler db = new DataBaseHandler();
         Connection connection = db.getDbConnection();
         Statement statement = connection.createStatement();
